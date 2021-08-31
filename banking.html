@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <h1 class="font-extrabold text-7xl text-center">Baper 
+        <span class="text-pink-500">Bank </span>Is Own
+        <span class="text-pink-500">Bank!!</span></h1>
+        </div>
+    </header> 
+    <main class="w-3/4 mx-auto bg-purple-600 bg-opacity-25 py-12 mt-8">
+        <section>
+            <div class="grid grid-cols-3 gap-4 mx-12">
+                <div class="rounded-lg shadow-lg hover:bg-green-300 bg-purple-400 p-16 rounded text-center">
+                    <h3 class="text-4xl font-bold">Diposit</h3>
+                    <h3 class="text-7xl text-white">$<span id="current-diposit">00</span></h3>
+                </div>
+                <div class="rounded-lg shadow-lg hover:bg-green-300 bg-pink-400 p-16 rounded text-center">
+                    <h3 class="text-4xl font-bold">Withraw</h3>
+                    <h3 class="text-7xl text-white">$<span id="withdrawed-Amount">00</span></h3>
+                </div>
+                <div class="rounded-lg shadow-lg hover:bg-green-300 bg-purple-400 p-16 rounded text-center">
+                    <h3 class="text-4xl font-bold">Balance</h3>
+                    <h3 class="text-7xl text-white">$<span id="current-balance">1240</span> </h3>
+                </div>
+            </div>
+        </section>
+        <hr class="mt-8">
+        <section>
+            <div class="grid grid-cols-2 gap-4 mx-12 content-center">
+                <div class="mt-8 bg-purple-400 rounded-lg">
+                    <h3 class="text-5xl mx-8 mb-2 mt-2 font-bold">Please Diposit</h3>
+                    <div class="mx-8">
+                        <input class="rounded" type="number" name="" placeholder="Enter your amount" id="diposit-field">
+                        <br>
+                        <button id="diposit-btn" class="px-3 py-2 font-bold bg-pink-400 font-semibold my-3 text-white rounded">Diposit</button>
+                    </div>
+                </div>
+                <div class="mt-8 bg-purple-400 rounded-lg">
+                    <h3 class="text-5xl mx-8 mb-2 mt-2 font-bold">Please Withdraw</h3>
+                    <div class="mx-8">
+                        <input class="rounded" type="number" name="" placeholder="Enter your amount" id="withdrawfield">
+                        <br>
+                        <button id="withdraw-btn" class="px-3 py-2 font-bold bg-pink-400 font-semibold my-3 text-white rounded">Withdraw</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="banking.js"></script>
+</body>
+</html>
