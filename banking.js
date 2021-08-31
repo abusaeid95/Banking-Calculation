@@ -67,16 +67,22 @@ document.getElementById('diposit-btn').addEventListener('click', function(){
     // defultBalance.innerText = updateBalance;
     
 })
-function updateBalance(newAmount,isAdd){
+function handleMinusBalance(){
     const defultBalance = document.getElementById('current-balance');
     const updateBalance = Number(defultBalance.innerText);
-    
+    return updateBalance;
+}
+
+function updateBalance(newAmount,isAdd){
+    const defultBalance = document.getElementById('current-balance');
+    // const updateBalance = Number(defultBalance.innerText);
+    const updateTotalBalance = handleMinusBalance();
     
      if(isAdd == true){
-         defultBalance.innerText = updateBalance + Number(newAmount);
+         defultBalance.innerText = updateTotalBalance + Number(newAmount);
     }
     else{
-        defultBalance.innerText = updateBalance - Number(newAmount);
+        defultBalance.innerText = updateTotalBalance - Number(newAmount);
     }
 }
 
@@ -85,8 +91,9 @@ function updateBalance(newAmount,isAdd){
 
 document.getElementById('withdraw-btn').addEventListener('click', function(){
     const withdrawAmount = getInputValue('withdrawfield')
+    const withdrawminushandle = handleMinusBalance();
 
-    if(withdrawAmount > 0){
+    if(withdrawAmount > 0 && withdrawAmount < withdrawminushandle){
         totalInputAmout(withdrawAmount,'withdrawed-Amount');
         updateBalance(withdrawAmount, false);
     }
